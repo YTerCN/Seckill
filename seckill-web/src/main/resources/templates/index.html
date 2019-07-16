@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:each="g:${goodsList}">
+    <a th:href="@{|/goSeckill/${g.id}|}">
+        <img th:src="@{|/${g.imageUrl}|}"><br>
+        <span th:text="${g.name}"></span>
+        <span th:text="${g.price}"></span><br>
+    </a>
+
+</div>
+</body>
+</html>
